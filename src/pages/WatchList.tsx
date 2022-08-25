@@ -19,7 +19,10 @@ export function WatchList() {
             <article className="watchlist-container__item">
               <img src={item.movie.image} alt={item.movie.title} width="90" />
               <p>{item.movie.title}</p>
-              <button className="watchlist-button">Watch trailer</button>
+              <a href={item.movie.trailer}>
+                <button className="watchlist-button">Watch trailer</button>
+              </a>
+
               <button className="watchlist-button">Delete</button>
             </article>
           </li>
