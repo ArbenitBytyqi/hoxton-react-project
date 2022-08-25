@@ -23,7 +23,21 @@ export function WatchList() {
                 <button className="watchlist-button">Watch trailer</button>
               </a>
 
-              <button className="watchlist-button">Delete</button>
+              <button
+                className="watchlist-button"
+                onClick={() => {
+                  fetch(
+                    `http://localhost:4000/watchList?_expand=movie/${item.id}`,
+                    {
+                      method: "DELETE",
+                    }
+                  )
+                    .then((resp) => resp.json())
+                    .then(() => location.reload());
+                }}
+              >
+                REMOVE
+              </button>
             </article>
           </li>
         ))}

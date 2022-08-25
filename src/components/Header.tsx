@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -6,14 +6,14 @@ function Header() {
       <div className="header__logo">MovieHub.com</div>
       <nav className="header__nav">
         <ul>
-          <li>
-            <Link to="/movies">Home</Link>
+          <li className="navLink">
+            <NavLink to="/movies">Home</NavLink>
           </li>
-          <li>
-            <Link to="/categories">Categories</Link>
+          <li className="navLink">
+            <NavLink to="/categories">Categories</NavLink>
           </li>
-          <li>
-            <Link to="/watchlist">Watch List</Link>
+          <li className="navLink">
+            <NavLink to="/watchlist">Watch List</NavLink>
           </li>
         </ul>
       </nav>
