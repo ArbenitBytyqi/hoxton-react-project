@@ -9,4 +9,11 @@ export type Movie = {
     description: string
     categoryId: number
     image: string
+    trailer: string
+}
+
+export type WatchListItem = {
+        "id": number,
+        "movieId": number,
+        "movie": Movie
 }

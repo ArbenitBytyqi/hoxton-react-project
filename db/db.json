@@ -1,9 +1,21 @@
 {
   "categories": [
-    { "id": 1, "name": "Action" },
-    { "id": 2, "name": "Comedy" },
-    { "id": 3, "name": "Horror" },
-    { "id": 4, "name": "Romance" }
+    {
+      "id": 1,
+      "name": "Action"
+    },
+    {
+      "id": 2,
+      "name": "Comedy"
+    },
+    {
+      "id": 3,
+      "name": "Horror"
+    },
+    {
+      "id": 4,
+      "name": "Romance"
+    }
   ],
   "movies": [
     {
@@ -11,14 +23,16 @@
       "title": "TOP GUN - MAVERICK",
       "description": "After more than 30 years of service as one of the Navy's best aviators, Pete Maverick Mitchell will have to train the best pilots for a special assignment. Now, Maverick must face the ghosts of his past and his deepest fears, in a mission that demands the ultimate sacrifice from those chosen to take part.",
       "categoryId": 1,
-      "image": "https://m.media-amazon.com/images/M/MV5BOWQwOTA1ZDQtNzk3Yi00ZmVmLWFiZGYtNjdjNThiYjJhNzRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg"
+      "image": "https://m.media-amazon.com/images/M/MV5BOWQwOTA1ZDQtNzk3Yi00ZmVmLWFiZGYtNjdjNThiYjJhNzRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
+      "trailer": "https://www.youtube.com/watch?v=giXco2jaZ_4"
     },
     {
       "id": 2,
       "title": "DAY SHIFT",
       "description": "A blue-collar, hard-working father who just wants to provide a good life for his smart 8-year-old daughter. His regular job cleaning pools in the San Fernando Valley is a cover for his real source of income: hunting and killing vampires.",
       "categoryId": 1,
-      "image": "https://upload.wikimedia.org/wikipedia/en/5/58/Day_Shift_%28film%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/en/5/58/Day_Shift_%28film%29.jpg",
+      "trailer": "https://www.youtube.com/watch?v=GN_IwBptKi4"
     },
     {
       "id": 3,
@@ -145,6 +159,28 @@
       "description": "Based on the Iliad by Homer, the film follows the attack on Troy by a united Greece and decides the fates of the people involved.",
       "categoryId": 4,
       "image": "https://m.media-amazon.com/images/M/MV5BMTk5MzU1MDMwMF5BMl5BanBnXkFtZTcwNjczODMzMw@@._V1_.jpg"
+    }
+  ],
+  "watchList": [
+    {
+      "id": 1,
+      "movieId": 1
+    },
+    {
+      "id": 2,
+      "movieId": 2
+    },
+    {
+      "id": 3,
+      "movieId": 3
+    },
+    {
+      "movieId": 5,
+      "id": 4
+    },
+    {
+      "movieId": 13,
+      "id": 5
     }
   ]
 }

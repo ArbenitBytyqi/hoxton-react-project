@@ -42,7 +42,7 @@ a:visited {
   --blue: #0064d3;
   --yellow: #f4ae01;
   --green: #88b719;
-  --main-background: #5ad2f3;;
+  --main-background: #5ad2f3;
 }
 
 
@@ -268,3 +268,11 @@ img {
   grid-template-columns: auto 3fr 1fr 1fr;
   column-gap: 2rem;
 }
+
+.watchlist-button{
+  cursor: pointer;
+  border-radius: 5px;
+  height: 25px;
+  background: #5ad2f3;
+}
+

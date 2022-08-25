@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Movie } from "../types";
 
 export function MovieDetails() {
@@ -21,9 +21,22 @@ export function MovieDetails() {
         <h3></h3>
         <h2>{movie.title}</h2>
         <p>{movie.description}</p>
-
-        <button>Watch trailer</button>
-        <button>Add to watch list</button>
+        <a href={movie.trailer}>
+          <button>Watch trailer</button>
+        </a>
+        <button
+          onClick={() => {
+            fetch(`http://localhost:4000/watchList`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ movieId: movie.id }),
+            });
+          }}
+        >
+          Add to watch list
+        </button>
       </div>
     </section>
   );

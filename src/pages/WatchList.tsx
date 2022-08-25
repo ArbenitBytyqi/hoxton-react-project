@@ -1,7 +1,30 @@
+import { useEffect, useState } from "react";
+import { WatchListItem } from "../types";
+
 export function WatchList() {
+  const [watchList, setWatchList] = useState<WatchListItem[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/watchList?_expand=movie")
+      .then((resp) => resp.json())
+      .then((watchListFromServer) => setWatchList(watchListFromServer));
+  }, []);
+
   return (
-    <div>
-      <h1>Watch List</h1>
-    </div>
+    <section className="watchlist-container">
+      <h1>This is you watch list</h1>
+      <ul>
+        {watchList.map((item) => (
+          <li>
+            <article className="watchlist-container__item">
+              <img src={item.movie.image} alt={item.movie.title} width="90" />
+              <p>{item.movie.title}</p>
+              <button className="watchlist-button">Watch trailer</button>
+              <button className="watchlist-button">Delete</button>
+            </article>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
