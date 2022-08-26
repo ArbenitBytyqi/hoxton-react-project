@@ -27,7 +27,7 @@ export function WatchList() {
                 className="watchlist-button"
                 onClick={() => {
                   const todosCopy = structuredClone(watchList);
-
+                  //@ts-ignore
                   const dele = todosCopy.find((dele) => dele.id === item.id);
                   fetch(`http://localhost:4000/watchlist/${item.id}`, {
                     method: "DELETE",
