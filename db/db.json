@@ -179,38 +179,5 @@
       "trailer": " https://youtu.be/znTLzRJimeY"
     }
   ],
-  "watchList": [
-    {
-      "id": 1,
-      "movieId": 1
-    },
-    {
-      "id": 2,
-      "movieId": 2
-    },
-    {
-      "id": 3,
-      "movieId": 3
-    },
-    {
-      "movieId": 5,
-      "id": 4
-    },
-    {
-      "movieId": 13,
-      "id": 5
-    },
-    {
-      "movieId": 20,
-      "id": 6
-    },
-    {
-      "movieId": 18,
-      "id": 7
-    },
-    {
-      "movieId": 2,
-      "id": 8
-    }
-  ]
+  "watchlist": []
 }

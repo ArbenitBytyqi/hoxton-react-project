@@ -5,7 +5,7 @@ export function WatchList() {
   const [watchList, setWatchList] = useState<WatchListItem[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/watchList?_expand=movie")
+    fetch("http://localhost:4000/watchlist?_expand=movie")
       .then((resp) => resp.json())
       .then((watchListFromServer) => setWatchList(watchListFromServer));
   }, []);
@@ -26,12 +26,12 @@ export function WatchList() {
               <button
                 className="watchlist-button"
                 onClick={() => {
-                  fetch(
-                    `http://localhost:4000/watchList?_expand=movie/${item.id}`,
-                    {
-                      method: "DELETE",
-                    }
-                  )
+                  const todosCopy = structuredClone(watchList);
+
+                  const dele = todosCopy.find((dele) => dele.id === item.id);
+                  fetch(`http://localhost:4000/watchlist/${item.id}`, {
+                    method: "DELETE",
+                  })
                     .then((resp) => resp.json())
                     .then(() => location.reload());
                 }}
